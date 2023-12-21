@@ -103,7 +103,7 @@ state = {
         <h4>RSVP by Jan 7</h4>
         <div>    
           <div className='gif'>
-            <iframe className="iframe" src="https://giphy.com/embed/13Qumr2SLqrl5e" frameBorder="0" class="giphy-embed" allowFullScreen>
+            <iframe className="giphy-embed" src="https://giphy.com/embed/13Qumr2SLqrl5e" frameBorder="0" allowFullScreen>
             </iframe></div><p><a href="https://giphy.com/gifs/cat-smile-idk-13Qumr2SLqrl5e"></a></p>        
         </div>
       </div>
