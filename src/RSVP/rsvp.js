@@ -20,8 +20,10 @@ class RsvpForm extends React.Component {
 
     <form
     className="form">    
-
-      <h1>Ready to swap?</h1>
+    <header>
+        <h1>Ready to swap?</h1>
+      </header>
+      <h4>Let us know you're coming.</h4>
       <div className='form-item'>
         <label>Name:</label>
         <input

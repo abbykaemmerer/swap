@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import RsvpForm from './RSVP/rsvp';
 import ConfirmScreen from './Confirm/confirm';
 import './App.css';
+import img from './img/smile.png';
 
 //BASE APP COMPONENT
 
@@ -83,9 +84,11 @@ state = {
     <div className="hero-view">
       <header>
         <h1>Let's Swap</h1>
-        <h2>Clothes, snacks, frends.</h2>
-        <h4>What more could you want?</h4>
       </header>
+      <div>
+        <h2>Clothes, snacks, friends.</h2>
+        <h4>What more could you want?</h4>
+      </div>
       <div className='info'>
         <div className='date'>
           <div>Jan 14</div>
@@ -94,6 +97,14 @@ state = {
         <div className='vr'></div>
         <div className='address'>
           1831 Sydney Street
+        </div>
+      </div>
+      <div className='rsvp'>
+        <h4>RSVP by Jan 7</h4>
+        <div>    
+          <div className='gif'>
+            <iframe className="iframe" src="https://giphy.com/embed/13Qumr2SLqrl5e" frameBorder="0" class="giphy-embed" allowFullScreen>
+            </iframe></div><p><a href="https://giphy.com/gifs/cat-smile-idk-13Qumr2SLqrl5e"></a></p>        
         </div>
       </div>
     </div> 

@@ -28,7 +28,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #e8470a;
 }
@@ -44,12 +43,35 @@
   justify-content: center;
   border-top: solid 2px #eb6424;
   border-bottom: solid 2px #eb6424;
+  margin: 20px 0;
+}
+
+.hero-view header {
+  margin: 30% 0 0 0;
 }
 
 .vr {
   border-left: solid 2px #eb6424;
   height: 100px;
   margin: 5px 30px;
+}
+
+.rsvp {
+  margin: 0px 0;
+}
+
+.gif {
+  margin: 40px 0 0 0;
+  width:100%;
+  height:0;
+  /* padding-bottom:68%; */
+  position:relative;
+}
+
+.iframe {
+  width:100%;
+  height:100%;
+  position: absolute;
 }
 
 .rsvp-section {
