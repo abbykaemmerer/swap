@@ -1,38 +1,107 @@
+/* color scheme
+#7c690a
+#babd8e
+#ffdac7
+#fa9500
+#eb6424 
+
+#bfcfdbb5
+#e8470a
+
+#a76b3f
+#bfcfdbb5
+
+#958d4a
+#e5a5bb
+
+#7dabb4
+#e9c151
+*/
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.hero-view {
+  background-color: #bfcfdbb5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #e8470a;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-view h1{
+  color: #e8470a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-view .info {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  border-top: solid 2px #eb6424;
+  border-bottom: solid 2px #eb6424;
+}
+
+.vr {
+  border-left: solid 2px #eb6424;
+  height: 100px;
+  margin: 5px 30px;
+}
+
+.rsvp-section {
+  background-color: #958d4a;
+  /* color: #e5a5bb; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainbtn {
+  border: 4px solid black;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  width:  calc(60px + 4vmin);
+  height:  calc(60px + 4vmin);
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+}
+
+.guests {
+  display: flex;
+  padding-left: 30px;
+  align-content: left;
+  text-align: left;
+}
+
+#error{
+  margin: 0;
+}
+
+form {
+  width: 60vw;
+  display: inline-block;
+}
+
+.mainbtn:hover { 
+  background-color: #b8b4dc
+}
+
+.textfield {
+  border: 2px solid white;
+  font-size: 14px;
+  width: 40vw;
+}
+
+.faq-section {
+  background-color: #a4673a;
+  color: #bfcfdbb5;
+  min-height: 100vh;
 }
