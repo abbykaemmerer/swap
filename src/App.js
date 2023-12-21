@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import RsvpForm from './RSVP/rsvp';
 import ConfirmScreen from './Confirm/confirm';
 import './App.css';
-import img from './img/smile.png';
 
 //BASE APP COMPONENT
 
@@ -103,7 +102,7 @@ state = {
         <h4>RSVP by Jan 7</h4>
         <div>    
           <div className='gif'>
-            <iframe className="giphy-embed" src="https://giphy.com/embed/13Qumr2SLqrl5e" frameBorder="0" allowFullScreen>
+            <iframe className="giphy-embed" title="gif" src="https://giphy.com/embed/13Qumr2SLqrl5e" frameBorder="0" allowFullScreen>
             </iframe></div><p><a href="https://giphy.com/gifs/cat-smile-idk-13Qumr2SLqrl5e"></a></p>        
         </div>
       </div>
