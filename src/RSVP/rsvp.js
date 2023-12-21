@@ -16,45 +16,36 @@ class RsvpForm extends React.Component {
 
   return (
   <div>
-  <p id="error">{this.props.errorMessage}</p>
+    <p id="error">{this.props.errorMessage}</p>
 
-  {/* Form */}
-   <form
+    <form
     className="form">    
 
-  {/* Enter Name Textfield */}
-      <label>
-      Name:
-        <br />
+      <h1>Ready to swap?</h1>
+      <div className='form-item'>
+        <label>Name:</label>
         <input
-         type="text" name="name"
-         className="textfield"
-         onChange={e => this.setState({ name: e.target.value})}/>
-      </label>
-
-
-  {/* Select Dietary Requirements Dropdown */}
-      <br /><br />
-      <label>
-      Dietary Requirements:
-          <br />
-          <select 
-          className="textfield"
-          onChange={e => this.setState({ dietaryRequirements: e.target.value})}>
-              <option value="" disabled selected>Select</option>
-              <option value="none">I'll eat anything!</option>
-              <option value="vegan">Vegan</option>
-              <option value="vegetarian">Vegetarian</option>
-              <option value="pescatarian">Pescatarian</option>
-          </select>
-      <br /><br />
-      </label>
-
-          <button 
-          className="mainbtn"
-          onClick={e => this.nextCicked(e)}>Next</button>
-     </form>
-    </div>
+        type="text" name="name"
+        className="textfield"
+        onChange={e => this.setState({ name: e.target.value})}/>
+      </div>
+      <div className='form-item'>
+        <label>How many items do you plan to contribute?</label>
+        <select 
+        className="textfield"
+        onChange={e => this.setState({ dietaryRequirements: e.target.value})}>
+            <option value="" disabled selected>Select</option>
+            <option value="none">Just comin for the snacks and the vibez</option>
+            <option value="1">1-3</option>
+            <option value="2">3-5</option>
+        </select>
+      </div>
+      <button 
+        className="main-btn"
+        onClick={e => this.nextCicked(e)}>Next
+      </button>
+    </form>
+  </div>
 
     );
   }
