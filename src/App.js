@@ -85,12 +85,12 @@ state = {
         <h1>Let's Swap</h1>
       </header>
       <div>
-        <h2>Clothes, snacks, friends.</h2>
+        <h3>Clothes, snacks, friends.</h3>
         <h4>What more could you want?</h4>
       </div>
       <div className='info'>
         <div className='date'>
-          <div>Jan 14</div>
+          <div>Feb 18</div>
           <div>3pm</div>
         </div>
         <div className='vr'></div>
@@ -99,7 +99,7 @@ state = {
         </div>
       </div>
       <div className='rsvp'>
-        <h4>RSVP by Jan 7</h4>
+        <h4>RSVP by Feb 11</h4>
         <div>    
           <div className='gif'>
             <iframe className="giphy-embed" title="gif" src="https://giphy.com/embed/13Qumr2SLqrl5e" frameBorder="0" allowFullScreen>
@@ -109,13 +109,15 @@ state = {
       </div>
     </div> 
 
-    <div className="rsvp-section">
+    <div>
+      <div className="rsvp-section">
       {view}
+      </div>
 
-      <div className="guests">
+      <div className="guests-section">
           <div>
-            <p onClick={this.toggle}> Guest List {this.state.toggleIcon}</p>
-            <p> {rsvps} </p>
+            <h1 onClick={this.toggle}> Guest List {this.state.toggleIcon}</h1>
+            <h4> {rsvps} </h4>
           </div>
       </div>
     </div>
@@ -124,20 +126,16 @@ state = {
 
 
     <div className='faq-section'>
-      <span>FAQs</span>
-      <div>
-        <span>What should I contribute?</span>
-        <span>Clothing, accessories, shoes. Up to 5 clean and well maintained items that are no longer serving you but could bring someone else joy.</span>
-      </div>
-      <div>
-        <span>What is the contribution process?</span>
-        <span>Please coordinate your drop off with Abby or Zoe before JAN 12. We will be collecting all items before the event so we can sort and display items accordingly.</span>
-      </div>
-      <div>
-        <span>Swapping etiquette:</span>
-        <span>Take approx the same amount of items that you contributed</span>
-        <span>Launder your contributions before drop off</span>
-        <span>Be mindful of drop off deadlines</span>
+      <h1>FAQs</h1>
+      <div className='faq'>
+        <h4>What should I contribute?</h4>
+        <h5>Clothing, accessories, shoes. Up to 5 clean and well maintained items that are no longer serving you but could bring someone else joy.</h5>
+        <h4>What is the contribution process?</h4>
+        <h5>Please coordinate your drop off with Abby or Zoe before JAN 12. We will be collecting all items before the event so we can sort and display items accordingly.</h5>
+        <h4>Swapping etiquette:</h4>
+        <h5>Take approx the same amount of items that you contributed</h5>
+        <h5>Launder your contributions before drop off</h5>
+        <h5>Be mindful of drop off deadlines</h5>
       </div>
     </div>
   
