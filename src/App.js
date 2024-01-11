@@ -3,8 +3,6 @@ import RsvpForm from './RSVP/rsvp';
 import ConfirmScreen from './Confirm/confirm';
 import './App.css';
 
-//BASE APP COMPONENT
-
 class App extends Component {
   
 state = {
@@ -16,68 +14,58 @@ state = {
   }
 
 
-//Saves the users entry as a pending invite,validates
-  onSubmit(name, dietaryRequirements) {
-    console.log(name)
-    if (name === undefined || dietaryRequirements === undefined) {
-      console.log("error")
+  onSubmit(name, contributions) {
+    if (name === undefined || contributions === undefined) {
+      console.log("error");
       this.setState({errorMessage: 'Please fill all fields'})
     } else {
 
     let pendingRsvp = []
     pendingRsvp.name = name;
-    pendingRsvp.dietaryRequirements = dietaryRequirements;
+    pendingRsvp.contributions = contributions;
     this.setState({ pendingRsvp: pendingRsvp, showConfirmScreen: true });
    }
   };
 
 
-//Pushes the pending invte data into the RSVP's array on confirm
   onConfirm = () => {
     let rsvps = [...this.state.rsvps]
     let newRsvp = {}
     newRsvp.name = this.state.pendingRsvp.name;
-    newRsvp.dietaryRequirements = this.state.pendingRsvp.dietaryRequirements;
+    newRsvp.contributions = this.state.pendingRsvp.contributions;
     rsvps.push(newRsvp);
     this.setState ({ rsvps: rsvps, showConfirmScreen: false, errorMessage: '' })
   }
 
 
-//Toggles the guestslist, and swutched the icon between + & -
   toggle = (event) => {
     this.state.toggleRsvps === true ? this.setState ({toggleRsvps: false, toggleIcon: "⊕"}) : this.setState ({toggleRsvps: true, toggleIcon: "⊖"}) ;
   }
  
 
-//RENDER
   render() {
-//Conditonal rendering to show correct screen
   let view;
   if (this.state.showConfirmScreen === false) {
       view = <RsvpForm
-      showConfirmScreen={(name, dietaryRequirements) => this.onSubmit(name, dietaryRequirements)}
+      showConfirmScreen={(name, contributions) => this.onSubmit(name, contributions)}
       errorMessage={this.state.errorMessage}/>
   } else {
       view = <ConfirmScreen 
       name={this.state.pendingRsvp.name}
-      dietaryRequirements={this.state.pendingRsvp.dietaryRequirements}
+      contributions={this.state.pendingRsvp.contributions}
       onConfirm={this.onConfirm}
       onEdit={() => this.setState ({ showConfirmScreen: false, errorMessage: '' })}/>
   }
 
-//Note: The following should really be its own component!!! Refractor
-//Render and toggle the guest list conditionally
   let rsvps;
   if (this.state.toggleRsvps === true && this.state.rsvps.length <= 0) {
         rsvps = <div><p>No guests so far</p></div>
       } else if (this.state.toggleRsvps === true) {
-        rsvps = <div> {this.state.rsvps.map((r) => { return <li>{r.name}, {r.dietaryRequirements}</li> })} </div>
+        rsvps = <div> {this.state.rsvps.map((r) => { return <li>{r.name}, {r.contributions}</li> })} </div>
     } else {
   //else nothing is rendered as section is not toggled
   }
 
-
-//RETURN
   return (
   <div className="App">
     <div className="hero-view">
