@@ -61,9 +61,8 @@ state = {
   if (this.state.toggleRsvps === true && this.state.rsvps.length <= 0) {
         rsvps = <div><p>No guests so far</p></div>
       } else if (this.state.toggleRsvps === true) {
-        rsvps = <div> {this.state.rsvps.map((r) => { return <li>{r.name}, {r.contributions}</li> })} </div>
+        rsvps = <div> {this.state.rsvps.map((r) => { return <li>{r.name} is contributing {r.contributions}</li> })} </div>
     } else {
-  //else nothing is rendered as section is not toggled
   }
 
   return (
@@ -105,7 +104,7 @@ state = {
       <div className="guests-section">
           <div>
             <h1 onClick={this.toggle}> Guest List {this.state.toggleIcon}</h1>
-            <h4> {rsvps} </h4>
+            <h4 className='guests'> {rsvps} </h4>
           </div>
       </div>
     </div>
@@ -115,20 +114,22 @@ state = {
 
     <div className='faq-section'>
       <h1>FAQs</h1>
-      <div className='faq'>
-        <h3>What should I contribute?</h3>
-        <p>Clothing, accessories, shoes. Up to 5 clean and well maintained items that are no longer serving you but could bring someone else joy.</p>
-        <h3>What is the contribution process?</h3>
-        <p>We will be collecting all items before the event so we can sort and display items accordingly.</p>
-        <p>Please coordinate your drop off with Abby or Zoe before FEB 16.</p>
-        <h3>Swapping etiquette:</h3>
-        <p>Be mindful of drop off deadlines</p>
-        <p>Launder your contributions before drop off</p>
-        <p>Take approx the same amount of items that you contributed</p>
+        <div className='faq'>
+          <h3>What should I contribute?</h3>
+          <p>Clothing, accessories, shoes. Up to 5 clean and well maintained items that are no longer serving you but could bring someone else joy.</p>
+        </div>
+        <div className='faq'>
+          <h3>What is the contribution process?</h3>
+          <p>We will be collecting all items before the event so we can sort and display items accordingly.</p>
+          <p>Please coordinate your drop off with Abby or Zoe before FEB 16.</p>
+        </div>
+        <div className='faq'>
+          <h3>Swapping etiquette:</h3>
+          <p>Be mindful of drop off deadlines</p>
+          <p>Launder your contributions before drop off</p>
+          <p>Take approx the same amount of items that you contributed</p>
+        </div>
       </div>
-    </div>
-  
-
     </div>
   );
  }

@@ -1,7 +1,7 @@
 
 const ConfirmScreen = ( props ) => {
     return (
-        <div>
+        <div className="confirm-section">
             <h1>Confirm RSVP deets</h1>
             <p>Name: {props.name}</p>
             <p>Contributing: {props.contributions}</p>
@@ -12,7 +12,7 @@ const ConfirmScreen = ( props ) => {
             >x
             </button>
             <button
-                className="man-btn"
+                className="main-btn"
                 onClick={props.onConfirm}
             >Confirm
             </button>
