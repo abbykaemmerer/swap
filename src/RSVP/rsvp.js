@@ -36,8 +36,8 @@ class RsvpForm extends React.Component {
         <select 
         className="textfield"
         onChange={e => this.setState({ dietaryRequirements: e.target.value})}>
-            <option value="" disabled selected>Select</option>
-            <option value="none">Just comin for the snacks and the vibez</option>
+            <option value="" disabled defaultValue>Select</option>
+            <option value="none">Just comin for snacks & vibez</option>
             <option value="1">1-3</option>
             <option value="2">3-5</option>
         </select>
