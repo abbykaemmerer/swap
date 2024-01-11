@@ -128,14 +128,15 @@ state = {
     <div className='faq-section'>
       <h1>FAQs</h1>
       <div className='faq'>
-        <h4>What should I contribute?</h4>
-        <h5>Clothing, accessories, shoes. Up to 5 clean and well maintained items that are no longer serving you but could bring someone else joy.</h5>
-        <h4>What is the contribution process?</h4>
-        <h5>Please coordinate your drop off with Abby or Zoe before JAN 12. We will be collecting all items before the event so we can sort and display items accordingly.</h5>
-        <h4>Swapping etiquette:</h4>
-        <h5>Take approx the same amount of items that you contributed</h5>
-        <h5>Launder your contributions before drop off</h5>
-        <h5>Be mindful of drop off deadlines</h5>
+        <h3>What should I contribute?</h3>
+        <p>Clothing, accessories, shoes. Up to 5 clean and well maintained items that are no longer serving you but could bring someone else joy.</p>
+        <h3>What is the contribution process?</h3>
+        <p>We will be collecting all items before the event so we can sort and display items accordingly.</p>
+        <p>Please coordinate your drop off with Abby or Zoe before FEB 16.</p>
+        <h3>Swapping etiquette:</h3>
+        <p>Be mindful of drop off deadlines</p>
+        <p>Launder your contributions before drop off</p>
+        <p>Take approx the same amount of items that you contributed</p>
       </div>
     </div>
   
