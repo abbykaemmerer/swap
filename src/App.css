@@ -116,13 +116,13 @@
 }
 
 #select {
-  background: white !important;
-  color: black !important;
   max-width: min-content;
   margin: 0 auto;
 }
 
 .textfield {
+  background: white !important;
+  color: black !important;
   border-radius: 0px !important;
   border: 2px solid white;
   font-size: 14px;
