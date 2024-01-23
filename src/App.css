@@ -29,7 +29,7 @@
   font-family: monospace;
 }
 
-.hero-view {
+.invite-screen {
   background-color: #7f98dd;
   min-height: 100vh;
   display: flex;
@@ -40,11 +40,11 @@
   color: #e4ddd2;
 }
 
-.hero-view h1{
+.invite-screen h1{
   color: #e4ddd2;
 }
 
-.hero-view .info {
+.invite-screen .info {
   display: flex;
   width: 80%;
   align-items: center;

@@ -1,138 +1,126 @@
-import React, { Component } from 'react';
-import RsvpForm from './RSVP/rsvp';
+import React, { useEffect, useState } from 'react';
 import ConfirmScreen from './Confirm/confirm';
 import './App.css';
+import InviteScreen from './Invite/invite';
+import GuestListScreen from './GuestList/guest-list';
+import RSVPFormScreen from './RSVPForm/rsvp';
+import FAQScreen from './FAQ/faq';
+import { nanoid } from "nanoid";
 
-class App extends Component {
-  
-state = {
-  showConfirmScreen: false,
-  toggleRsvps: false,
-  toggleIcon: "⊕",
-  rsvps: [],
-  errorMessage: '',
-  }
+function App() {
 
-
-  onSubmit(name, contributions) {
-    if (name === undefined || contributions === undefined) {
-      console.log("error");
-      this.setState({errorMessage: 'Please fill all fields'})
-    } else {
-
-    let pendingRsvp = []
-    pendingRsvp.name = name;
-    pendingRsvp.contributions = contributions;
-    this.setState({ pendingRsvp: pendingRsvp, showConfirmScreen: true });
-   }
-  };
-
-
-  onConfirm = () => {
-    let rsvps = [...this.state.rsvps]
-    let newRsvp = {}
-    newRsvp.name = this.state.pendingRsvp.name;
-    newRsvp.contributions = this.state.pendingRsvp.contributions;
-    rsvps.push(newRsvp);
-    this.setState ({ rsvps: rsvps, showConfirmScreen: false, errorMessage: '' })
-  }
-
-
-  toggle = (event) => {
-    this.state.toggleRsvps === true ? this.setState ({toggleRsvps: false, toggleIcon: "⊕"}) : this.setState ({toggleRsvps: true, toggleIcon: "⊖"}) ;
-  }
+//  const onConfirm = () => {
+//     let rsvps = [...state.rsvps]
+//     let newRsvp = {}
+//     newRsvp.name = state.pendingRsvp.name;
+//     newRsvp.contributions = state.pendingRsvp.contributions;
+//     rsvps.push(newRsvp);
+//     this.setState ({ 
+//       rsvps: rsvps, 
+//       // showConfirmScreen: false, 
+//       errorMessage: '' 
+//     })
+//   }
  
+// const onSubmit = (name, contributions) => {
+//   if(name === undefined || contributions === undefined) {
+//     console.log('error');
+//   } else {
+//     let pendingRsvp = []
+//       pendingRsvp.name = name;
+//       pendingRsvp.contributions = contributions;
+//       this.setState({
+//         pendingRsvp: pendingRsvp, 
+//         // showConfirmScreen: true
+//       });
+//     }
+// } 
+const savedList = JSON.parse(localStorage.getItem('savedGuestList'));
+const initialState={
+  list:savedList ? savedList : []
+}
+const [name, setName] = useState();
+const [contribution, setContribution] = useState();
 
-  render() {
-  let view;
-  if (this.state.showConfirmScreen === false) {
-      view = <RsvpForm
-      showConfirmScreen={(name, contributions) => this.onSubmit(name, contributions)}
-      errorMessage={this.state.errorMessage}/>
+const [list, setList] = useState(initialState.list);
+
+useEffect(()=>{
+  localStorage.setItem('savedGuestList', JSON.stringify(list))
+})
+const handleNameChange = (e) => {
+  setName(e.target.value);
+};
+
+const handleContributionChange = (e) => {
+  setContribution(e.target.value);
+};
+
+const handleNext = (e) => {
+  e.preventDefault();
+  if (name) {
+    const newGuest = {
+      name: name,
+      contribution: contribution,
+      id: nanoid(),
+    };
+    setList([...list, newGuest]);
+    setName("");
+    setContribution([]);
   } else {
-      view = <ConfirmScreen 
-      name={this.state.pendingRsvp.name}
-      contributions={this.state.pendingRsvp.contributions}
-      onConfirm={this.onConfirm}
-      onEdit={() => this.setState ({ showConfirmScreen: false, errorMessage: '' })}/>
+    alert("Please enter guest name");
   }
+};
 
-  let rsvps;
-  if (this.state.toggleRsvps === true && this.state.rsvps.length <= 0) {
-        rsvps = <div><p>No guests so far</p></div>
-      } else if (this.state.toggleRsvps === true) {
-        rsvps = <div> {this.state.rsvps.map((r) => { return <li>{r.name} is contributing {r.contributions}</li> })} </div>
-    } else {
-  }
+const handleDelete = (guest) => {
+  let newlist = list.map((guest) => ({ ...guest }));
+  setList(newlist.filter((g) => g.id !== guest.id));
+};
+
+
+  // let view;
+  // if (this.state.showConfirmScreen === false) {
+  //     view = 
+  //     <RSVPFormScreen
+  //       input={input}
+  //       handleChange={handleChange}
+  //       handleNext={handleNext}
+  //       showConfirmScreen={(name, contributions) => onSubmit(name, contributions)}
+  //       errorMessage={state.errorMessage}/>
+  // } else {
+  //     view = 
+  //     <ConfirmScreen 
+  //       name={state.pendingRsvp.name}
+  //       contributions={state.pendingRsvp.contributions}
+  //       onConfirm={onConfirm}
+  //       />
+  // }
+
+  // let rsvps;
+  // if (state.rsvps.length <= 0) {
+  //       rsvps = <div><p>No guests so far</p></div>
+  //     } else {
+  //       rsvps = <div> {state.rsvps.map((r) => { return <li>{r.name} is contributing {r.contributions}</li> })} </div>
+  //   }
 
   return (
   <div className="App">
-    <div className="hero-view">
-      <header>
-        <h1>Let's Swap</h1>
-      </header>
-      <div>
-        <h3>Clothes, snacks, friends.</h3>
-        <h4>What more could you want?</h4>
-      </div>
-      <div className='info'>
-        <div className='date'>
-          <div>Feb 18</div>
-          <div>3pm</div>
-        </div>
-        <div className='vr'></div>
-        <div className='address'>
-          1831 Sydney Street
-        </div>
-      </div>
-      <div className='rsvp'>
-        <h4>RSVP by Feb 11</h4>
-        <div>    
-          <div className='gif'>
-            <iframe className="giphy-embed" title="gif" src="https://giphy.com/embed/13Qumr2SLqrl5e" frameBorder="0" allowFullScreen>
-            </iframe>
-          </div>      
-        </div>
-      </div>
-    </div> 
-
-    <div>
-      <div className="rsvp-section">
-      {view}
-      </div>
-
-      <div className="guests-section">
-          <div>
-            <h1 onClick={this.toggle}> Guest List {this.state.toggleIcon}</h1>
-            <h4 className='guests'> {rsvps} </h4>
-          </div>
-      </div>
-    </div>
-    
-
-
-
-    <div className='faq-section'>
-      <h1>FAQs</h1>
-        <div className='faq'>
-          <h3>What should I contribute?</h3>
-          <p>Clothing, accessories, shoes. Up to 5 clean and well maintained items that are no longer serving you but could bring someone else joy.</p>
-        </div>
-        <div className='faq'>
-          <h3>What is the contribution process?</h3>
-          <p>We will be collecting all items before the event so we can sort and display items accordingly.</p>
-          <p>Please coordinate your drop off with Abby or Zoe before FEB 16.</p>
-        </div>
-        <div className='faq'>
-          <h3>Swapping etiquette:</h3>
-          <p>Be mindful of drop off deadlines</p>
-          <p>Launder your contributions before drop off</p>
-          <p>Take approx the same amount of items that you contributed</p>
-        </div>
-      </div>
-    </div>
+    <InviteScreen></InviteScreen>
+    <RSVPFormScreen
+      input={name}
+      select={contribution}
+      handleNameChange={handleNameChange}
+      handleContributionChange={handleContributionChange}
+      handleNext={handleNext}
+    ></RSVPFormScreen>
+    <GuestListScreen
+      list={list}
+      handleNameChange={handleNameChange}
+      handleContributionChange={handleContributionChange}
+      handleDelete={handleDelete}
+    ></GuestListScreen>
+    <FAQScreen></FAQScreen>
+  </div>
   );
- }
 }
 
 export default App;
