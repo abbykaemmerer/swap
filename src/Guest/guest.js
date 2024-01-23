@@ -2,10 +2,10 @@ import React from "react";
 
 function Guest(props) {
   return (
-    <div className="guest">
+    <div className="guests">
         <li>
             {props.guest.name} is contributing {props.guest.contribution} 
-            <button onClick={() => props.handleDelete(props.guest)}>X</button>
+            <button className="remove-guest-btn" onClick={() => props.handleDelete(props.guest)}>x</button>
         </li>
     </div>
   );
