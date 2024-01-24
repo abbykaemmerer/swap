@@ -13,7 +13,7 @@ const ConfirmScreen = ( props ) => {
             </button>
             <button
                 className="main-btn"
-                onClick={props.onConfirm}
+                onClick={props.handleConfirm}
             >Confirm
             </button>
         </div>
