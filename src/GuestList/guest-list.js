@@ -76,10 +76,10 @@ function GuestList() {
     </div>
     <div className="guests-section">
       <h1>Guest List</h1>
-      <section className="guests">
+      <section>
       {guests.map((guest, index) => {
         return(
-          <div key={index} className="guest_container">
+          <div key={index} className="guests">
             <li className="guest">
               {guest.name}
               </li>
