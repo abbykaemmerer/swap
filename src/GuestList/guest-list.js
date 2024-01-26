@@ -70,7 +70,7 @@ function GuestList() {
             className="main-btn"
             onClick={(e) => {
               addGuest(name);
-            }}>ADD GUEST
+            }}>Confirm
         </button>
       </form>
     </div>
