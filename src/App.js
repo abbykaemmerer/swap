@@ -19,47 +19,36 @@ const [list, setList] = useState(initialState.list);
 useEffect(()=>{
   localStorage.setItem('savedGuestList', JSON.stringify(list))
 })
-const handleNameChange = (e) => {
-  setName(e.target.value);
-};
+// const handleNameChange = (e) => {
+//   setName(e.target.value);
+// };
 
-const handleContributionChange = (e) => {
-  setContribution(e.target.value);
-};
+// const handleContributionChange = (e) => {
+//   setContribution(e.target.value);
+// };
 
 
-const handleConfirm = () => {
-  const newGuest = {
-    name: name,
-    contribution: contribution,
-    id: nanoid(),
-  };
-  setName("");
-  setContribution("");
-  setList([...list, newGuest]);
-}
+// const handleConfirm = () => {
+//   const newGuest = {
+//     name: name,
+//     contribution: contribution,
+//     id: nanoid(),
+//   };
+//   setName("");
+//   setContribution("");
+//   setList([...list, newGuest]);
+// }
 
-const handleDelete = (guest) => {
-  let newlist = list.map((guest) => ({ ...guest }));
-  setList(newlist.filter((g) => g.id !== guest.id));
-};
+// const handleDelete = (guest) => {
+//   let newlist = list.map((guest) => ({ ...guest }));
+//   setList(newlist.filter((g) => g.id !== guest.id));
+// };
 
 
   return (
   <div className="App">
     <InviteScreen></InviteScreen>
-    <RSVPFormScreen
-        input={name}
-        select={contribution}
-        handleNameChange={handleNameChange}
-        handleContributionChange={handleContributionChange}
-        handleConfirm={handleConfirm}
-        />
     <GuestListScreen
-      list={list}
-      handleNameChange={handleNameChange}
-      handleContributionChange={handleContributionChange}
-      handleDelete={handleDelete}
     ></GuestListScreen>
     <FAQScreen></FAQScreen>
   </div>

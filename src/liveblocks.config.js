@@ -1,4 +1,4 @@
-import { LiveList, createClient } from "@liveblocks/client";
+import { LiveList, LiveObject, createClient } from "@liveblocks/client";
 import { createRoomContext } from "@liveblocks/react";
   
 const client = createClient({
@@ -10,8 +10,14 @@ const client = createClient({
 // LiveList, LiveMap, LiveObject instances, for which updates are
 // automatically persisted and synced to all connected clients.
 type Storage = {
-  guests: LiveList<{ text: string}>;
+  guests: LiveList< { name: string }>;
 };
+
+// type Guest = LiveObject<{
+//   name: string;
+//   contribution: number;
+// }>;
+
 
 export const {
   suspense: { 
