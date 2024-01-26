@@ -25,13 +25,14 @@ function GuestList() {
   const deleteGuest = useMutation(({ storage }, index) => {
     storage.get("guests").delete(index);
   },[]);
-  const deleteAll = useMutation(({ storage }, guests) => {
-    storage.get("guests").clear()
-  },[]);
+
   const addGuest = useMutation(({ storage }, name) => {
     storage.get("guests").push(new LiveObject({ name }));
   }, []);
 
+  if (state.succeeded) {
+    // return <p>Thanks for joining!</p>;
+  }
   return (
   <div>
     <div className="rsvp-section">

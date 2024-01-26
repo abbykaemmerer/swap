@@ -1,4 +1,4 @@
-import { LiveList, LiveObject, createClient } from "@liveblocks/client";
+import { createClient } from "@liveblocks/client";
 import { createRoomContext } from "@liveblocks/react";
   
 const client = createClient({
@@ -9,9 +9,10 @@ const client = createClient({
 // Room, even after all users leave. Fields under Storage typically are
 // LiveList, LiveMap, LiveObject instances, for which updates are
 // automatically persisted and synced to all connected clients.
-type Storage = {
-  guests: LiveList< { name: string }>;
-};
+
+// type Storage = {
+//   guests: LiveList< { name: string }>;
+// };
 
 // type Guest = LiveObject<{
 //   name: string;
