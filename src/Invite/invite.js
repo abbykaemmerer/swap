@@ -15,7 +15,7 @@ const InviteScreen = ( ) => {
           </div>
           <div className='vr'></div>
           <div className='address'>
-            1831 Sydney Street
+            1829 Sydney Street
           </div>
         </div>
         <div className='rsvp'>

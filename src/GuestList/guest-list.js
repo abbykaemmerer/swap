@@ -30,8 +30,38 @@ function GuestList() {
     storage.get("guests").push(new LiveObject({ name }));
   }, []);
 
+  //TODO: find a good charity, confirm/deny screen, add deny option, info page
+
   if (state.succeeded) {
-    // return <p>Thanks for joining!</p>;
+    return (
+      <div>
+      <div className="rsvp-section">
+        <div className="confirm">
+          <h1>Yay!</h1>
+          <h2>We're so excited to see you ◡̈</h2>
+        </div>
+      </div>
+          <div className="guests-section">
+          <h1>Guest List</h1>
+          <section>
+          {guests.map((guest, index) => {
+            return(
+              <div key={index} className="guests">
+                <li className="guest">
+                  {guest.name}
+                  </li>
+                <button className="remove-guest-btn"
+                  onClick={() => deleteGuest(index)}>
+                  ✕
+                </button>
+              </div>
+            );
+          })}
+          </section>
+        </div>
+      </div>
+    )
+
   }
   return (
   <div>

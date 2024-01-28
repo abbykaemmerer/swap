@@ -64,6 +64,24 @@
   margin: 40px 0 0 0;
 }
 
+.info-section {
+  background-color: #ce6069;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e4ddd2;
+}
+
+.info {
+  margin: 0 40px;
+}
+
+.info a {
+  color: #e4ddd2;
+}
+
 .rsvp-section {
   background-color: #d7c743;
   min-height: 100vh;
@@ -129,8 +147,8 @@
   outline: none;
 }
 
-#error{
-  margin: 0;
+.confirm {
+  margin: 40px;
 }
 
 .guests-section {
@@ -147,9 +165,8 @@
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: space-between;
 }
-
 
 .remove-guest-btn {
   border: 1px solid #a86e51;
@@ -159,6 +176,8 @@
   color: #e4ddd2;
   box-shadow: 0px 0px 20px 0px #bfb8ae;
   text-transform: capitalize;
+  font-size: 8px;
+  padding: 2px;
 }
 
 .faq-section {
@@ -176,4 +195,8 @@
 
 .faq {
   margin: 5px 40px;
+}
+
+.faq p{
+  text-align: left;
 }
