@@ -4,7 +4,8 @@ const FAQScreen = ( ) => {
         <h1>FAQs</h1>
           <div className='faq'>
             <h3>What should I contribute?</h3>
-            <p>Clothing, accessories, shoes. Up to 5 clean and well maintained items that are no longer serving you but could bring someone else joy 🫶</p>
+            <p>Clothing, accessories, shoes. </p>
+            <p> Up to 5 clean and well maintained items that are no longer serving you but could bring someone else joy 🫶</p>
           </div>
           <div className='faq'>
             <h3>What is the contribution process?</h3>
