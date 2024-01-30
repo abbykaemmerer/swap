@@ -39,11 +39,11 @@ function GuestList() {
           <h1>Yay!</h1>
           <div className="gif-container">
           <div id="cowboy">
-            <iframe src="https://giphy.com/embed/cdNSp4L5vCU7aQrYnV" width="100%" height="100%" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
+            <iframe src="https://giphy.com/embed/cdNSp4L5vCU7aQrYnV" title="cowboy" width="100%" height="100%" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
           </div>
-          <div id="skeleton"><iframe src="https://giphy.com/embed/aWRWTF27ilPzy" width="100%" height="100%" frameBorder="0" className="giphy-embed" allowFullScreen></iframe></div>
-          <div id="kermit"><iframe src="https://giphy.com/embed/DYH297XiCS2Ck" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
-          <div><iframe src="https://giphy.com/embed/3o7TKDkDbIDJieKbVm" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+          <div id="skeleton"><iframe src="https://giphy.com/embed/aWRWTF27ilPzy" title="skeleton" width="100%" height="100%" frameBorder="0" className="giphy-embed" allowFullScreen></iframe></div>
+          <div id="kermit"><iframe src="https://giphy.com/embed/DYH297XiCS2Ck" title="kermit" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+          <div><iframe src="https://giphy.com/embed/3o7TKDkDbIDJieKbVm" title="mushroom" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
            </div>
           <h2>We're so excited to see you ◡̈</h2>
           <button 
