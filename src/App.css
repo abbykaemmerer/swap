@@ -78,8 +78,16 @@
   margin: 0 40px;
 }
 
+.info h1 {
+  margin: 10px;
+}
+
 .info a {
   color: #e4ddd2;
+}
+
+.info p{
+  text-align: left;
 }
 
 .rsvp-section {
