@@ -30,7 +30,6 @@ function GuestList() {
     storage.get("guests").push(new LiveObject({ name }));
   }, []);
 
-  //TODO: find a good charity, confirm/deny screen, add deny option, info page
 
   if (state.succeeded) {
     return (

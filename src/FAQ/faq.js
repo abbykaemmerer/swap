@@ -5,7 +5,7 @@ const FAQScreen = ( ) => {
           <div className='faq'>
             <h3>What should I contribute?</h3>
             <p>Clothing, accessories, shoes. </p>
-            <p> Up to 5 clean and well maintained (undamaged) items that are no longer serving you but could bring someone else joy 🫶</p>
+            <p> Up to 5 clean and well maintained items that are no longer serving you but could bring someone else joy 🫶</p>
           </div>
           <div className='faq'>
             <h3>What is the contribution process?</h3>
@@ -14,10 +14,8 @@ const FAQScreen = ( ) => {
           </div>
           <div className='faq'>
             <h3>Bits & Bobs:</h3>
-            <p>Be mindful of drop off deadlines ◡̈</p>
             <p>Please launder your contributions before drop off</p>
             <p>We'll wait for everyone to arrive before we start swapping so everyone has a fair chance of gettin that goodgood, ya know?</p>
-
           </div>
           <div className='faq' id="shenanigans">
             <h3>Day Of Shenanigans:</h3>
