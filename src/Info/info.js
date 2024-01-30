@@ -7,8 +7,8 @@ return (
             <h1>What is a clothing swap?</h1>
             <p>First and foremost, a partyyyyy!</p>
             <p>Clothing swaps are used to exchange clothes and items within your community.</p>
-            <p>Swapping clothes with your friends extends the lifespan of the item and is a 
-            responsible way to rehome clothing. </p>
+            <p>Swapping with your friends extends the lifespan of the item and is a 
+            responsible way to rehome clothing.</p>
             <p>Unfortunately when we donate clothes, a very small portion actually gets 
             redistributed. The majority get shipped to other countries and wind up in their 
             landfills. Making our waste another countries' problem.</p> 

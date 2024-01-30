@@ -19,7 +19,7 @@ const InviteScreen = ( ) => {
           </div>
         </div>
         <div className='rsvp'>
-          <h4>RSVP by Feb 11</h4>
+          <h4>RSVP by Feb 15</h4>
           <div>    
             <div className='gif'>
               <iframe className="giphy-embed" title="gif" src="https://giphy.com/embed/13Qumr2SLqrl5e" frameBorder="0" allowFullScreen>
