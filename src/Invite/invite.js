@@ -15,7 +15,7 @@ const InviteScreen = ( ) => {
           </div>
           <div className='vr'></div>
           <div className='address'>
-            1829 Sydney Street
+            <a href="https://maps.app.goo.gl/nyf78T32qnftfinDA">1823 Sidney St.</a>
           </div>
         </div>
         <div className='rsvp'>

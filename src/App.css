@@ -57,7 +57,11 @@
 .vr {
   border-left: solid 2px #e4ddd2;
   height: 100px;
-  margin: 5px 30px;
+  margin: 5px 20px;
+}
+
+.address a {
+  text-decoration: none;
 }
 
 .gif {
