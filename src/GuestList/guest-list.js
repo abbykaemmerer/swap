@@ -27,6 +27,7 @@ function GuestList() {
   },[]);
 
   const addGuest = useMutation(({ storage }, name) => {
+    document.body.style.zoom="100%"
     storage.get("guests").push(new LiveObject({ name }));
   }, []);
 
