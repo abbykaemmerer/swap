@@ -160,6 +160,32 @@
   margin: 40px;
 }
 
+.confirm #giphy-embed {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+
+.gif-container div {
+  position: relative;
+}
+
+#cowboy{
+  z-index: 0;
+  left: -90px
+}
+
+#skeleton {
+  z-index: 1;
+  top: -170px;
+  left: 75px;
+}
+
+#kermit {
+  z-index: 2;
+  top: -200px;
+  left: 60px;
+}
 .guests-section {
   background-color: #e4ddd2;
   color: #a86e51;
