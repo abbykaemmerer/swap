@@ -30,28 +30,25 @@ function GuestList() {
     storage.get("guests").push(new LiveObject({ name }));
   }, []);
 
-
+  const back = (e) => {
+    e.preventDefault();
+    window.location.reload();
+  }
   if (state.succeeded) {
     return (
       <div>
       <div className="rsvp-section">
         <div className="confirm">
-          <h1>Yay!</h1>
-          <div className="gif-container">
-          <div id="cowboy">
-            <iframe src="https://giphy.com/embed/cdNSp4L5vCU7aQrYnV" title="cowboy" width="100%" height="100%" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
-          </div>
-          <div id="skeleton"><iframe src="https://giphy.com/embed/aWRWTF27ilPzy" title="skeleton" width="100%" height="100%" frameBorder="0" className="giphy-embed" allowFullScreen></iframe></div>
-          <div id="kermit"><iframe src="https://giphy.com/embed/DYH297XiCS2Ck" title="kermit" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
-          <div><iframe src="https://giphy.com/embed/3o7TKDkDbIDJieKbVm" title="mushroom" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
-           </div>
+          <h1>{name}!!!</h1>
           <h2>We're so excited to see you ◡̈</h2>
+          <div className="gif-container">
+          <div><iframe src="https://giphy.com/embed/3o7TKDkDbIDJieKbVm" title="mushroom" width="100%" height="100%" frameBorder="0" className="giphy-embed" allowFullScreen></iframe></div>
+           </div>
           <button 
             type="submit"
             className="secondary-btn"
-            onClick={(e) => {
-              addGuest(name);
-            }}>Back
+            onClick={(e) => back(e)}>
+            Back
         </button>
         </div>
       </div>
@@ -77,6 +74,7 @@ function GuestList() {
     )
 
   }
+
   return (
   <div>
     <div className="rsvp-section">

@@ -98,6 +98,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #2b1d19;
 }
 
 .form-item {
@@ -157,35 +158,23 @@
 }
 
 .confirm {
-  margin: 40px;
+  margin: 0 40px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.confirm #giphy-embed {
-  border-radius: 50%;
-  width: 100%;
-  height: auto;
+.confirm h1 {
+  margin: 0;
+  text-shadow: 2px 2px 0px #ffffff;
+  color: #2b1d19;
 }
 
-.gif-container div {
-  position: relative;
+.confirm h2 {
+  margin: 1.33em 50px;
 }
 
-#cowboy{
-  z-index: 0;
-  left: -90px
-}
-
-#skeleton {
-  z-index: 1;
-  top: -170px;
-  left: 75px;
-}
-
-#kermit {
-  z-index: 2;
-  top: -200px;
-  left: 60px;
-}
 .guests-section {
   background-color: #e4ddd2;
   color: #a86e51;
