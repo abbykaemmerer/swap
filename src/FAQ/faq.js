@@ -14,7 +14,7 @@ const FAQScreen = ( ) => {
           </div>
           <div className='faq'>
             <h3>Bits & Bobs:</h3>
-            <p>Please launder your contributions before drop off</p>
+            <p>Please launder your contributions before drop off.</p>
             <p>We'll wait for everyone to arrive before we start swapping so everyone has a fair chance of gettin that goodgood, ya know?</p>
           </div>
           <div className='faq' id="shenanigans">
