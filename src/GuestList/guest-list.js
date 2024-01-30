@@ -90,8 +90,8 @@ function GuestList() {
                 >
                     <option value="" defaultValue>Select</option>
                     <option value="vibes">Just comin for snacks & vibez</option>
-                    <option value="1-3 items">1-3</option>
-                    <option value="3-5 items">3-5</option>
+                    <option value="1-3 items">1-3 items</option>
+                    <option value="3-5 items">3-5 items</option>
                 </select>
             </label>
           </div>
